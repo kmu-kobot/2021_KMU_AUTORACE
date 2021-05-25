@@ -1,4 +1,0 @@
-<launch>
-  <node name="simulator"  pkg="xycar_sim_drive" type="main.py" output="screen"/>
-  <node name="driver"  pkg="xycar_sim_drive" type="ultra_driver.py" output="screen"/>
-</launch>

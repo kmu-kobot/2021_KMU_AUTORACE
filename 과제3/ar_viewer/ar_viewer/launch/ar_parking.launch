@@ -1,0 +1,4 @@
+<launch>
+  <node name="xycar_sim_parking"  pkg="xycar_sim_parking" type="main.py"   output="screen"/>
+  <node name="ar_parking"  pkg="ar_viewer" type="ar_parking.py"   output="screen" />
+</launch>

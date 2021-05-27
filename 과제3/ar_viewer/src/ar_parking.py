@@ -62,7 +62,6 @@ def back_drive():
         # print('x->{}, yaw->{}, angle->{}'.format(dx, yaw, angle))
         xycar_msg.data = [angle, speed]
         motor_pub.publish(xycar_msg)
-        time.sleep(0.1)
 
 
 def show_ARtag():

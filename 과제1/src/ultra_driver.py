@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+# xycar_msg = (fl, fm, fr, 0, 0, 0, r, l)
 import rospy
 import time
 from std_msgs.msg import Int32MultiArray

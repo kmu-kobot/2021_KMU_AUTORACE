@@ -3,7 +3,6 @@ import rospy
 import math
 import cv2
 import time
-import rospy
 import numpy as np
 from ar_track_alvar_msgs.msg import AlvarMarkers
 from tf.transformations import euler_from_quaternion
@@ -14,6 +13,7 @@ roll, pitch, yaw = 0, 0, 0
 motor_pub = None
 xycar_msg = None
 speed, distance = 0, 0
+
 
 
 def init_node():

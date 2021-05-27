@@ -39,16 +39,16 @@ def callback(msg):
 
 def back_drive():
     global xycar_msg, motor_pub, speed, yaw, distance
-    speed = -20
+    speed = -15
     while True:
         show_ARtag()
         dx = arData["DX"]
         dy = arData["DY"]
         angle = math.atan2(dx, dy) - math.radians(yaw)
         angle = -math.degrees(angle * 2.5)
-        if abs(dx) < 1 and abs(yaw) < 1:
+        if distance > 250 and int(yaw) == 0:
             break
-        elif distance > 300:
+        elif distance > 400:
             break
         elif abs(angle) < 20:
             if abs(dx) < 1 and abs(yaw) < 1:
@@ -97,6 +97,7 @@ def show_ARtag():
 
 if __name__ == '__main__':
     init_node()
+    time.sleep(1)
     while not rospy.is_shutdown():
         dx = arData["DX"]
         dy = arData["DY"]
